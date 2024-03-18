@@ -15,23 +15,26 @@
         </header>
         <section class="container">
                 <!--Lectura del texto-->
-            <form action="" class="text-encriptar">
-                <textarea name="" id="" cols="50" rows="30" placeholder="Ingrese el texto aqui"></textarea>
+            <section class="text-encriptar">
+                <textarea name="" id="textEnDes" cols="50" rows="30" placeholder="Ingrese el texto aqui"></textarea>
                 <div class="ayuda">
                     <img src="IMG/info.svg" alt="icono de informacion">
                     <p>Solo letras minúsculas y sin acentos</p>
                 </div>
                 <fieldset class="botones-en-des">
-                    <button class="btn encriptar">Encriptar</button>
-                    <button class="btn desencriptar">Desencriptar</button>
+                    <button onclick="mostrarTextoEncriptado();" class="btn encriptar">Encriptar</button>
+                    <button onclick="mostrarTextoDesencriptado();" class="btn desencriptar">Desencriptar</button>
                 </fieldset>
-            </form>
+            </section>
             <!--Impresión del texto encriptado-->
-            <div class="salida-text">
-                <img src="IMG/wating.svg" alt="Imagen de espera" class="no-text-img">
-                <h2>Ningún mensaje fue encontrado</h2>
-                <p>Ingresa el texto que deseas encriptar o desencriptar</p>
-            </div>
+            <section class="salida-text">
+                <img src="IMG/wating.svg" alt="Imagen de espera" class="no-text-img" id="imgTextEnDes">
+                <div>
+                    <h2 id="titleEnDes">Ningún mensaje fue encontrado</h2>
+                    <p id="textEncript">Ingresa el texto que deseas encriptar o desencriptar</p>
+                </div>
+                <button class="btn desencriptar copiar-enc" id="btnCopiar">Copiar</button>
+            </section>
         </section>
     </main>
     <script src="app.js"></script>
